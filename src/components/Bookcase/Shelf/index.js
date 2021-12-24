@@ -9,30 +9,28 @@ const Shelf = ({ col: { list, id }, orientation }) => {
     return (
         <Droppable droppableId={id} direction="horizontal">
             {(provided) => (
-                <div
+                <Container
                     style={{
                         display: 'flex',
                         flexDirection: 'row',
-                        border: '1px solid brown',
-                        minWidth: '400px',
-                        minHeight: '100px',
-                        margin: '10px',
-                        justifyContent: orientation,
+                        //border: '1px solid brown',
+                        width: '382px',
+                        height: '100px'
                     }}>
                     <div
                         style={{
                             display: 'flex',
                             flexDirection: 'row',
-                            minWidth: '100%',
+                            minWidth: '100%'
                         }}
                         {...provided.droppableProps}
                         ref={provided.innerRef}>
-                        {list.map(({ title }, index) => (
-                            <Book key={title} title={title} index={index} />
+                        {list.map((book, index) => (
+                            <Book key={book.title} book={book} index={index} />
                         ))}
                         {provided.placeholder}
                     </div>
-                </div>
+                </Container>
             )}
         </Droppable>
     );
