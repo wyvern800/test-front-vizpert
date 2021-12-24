@@ -5,22 +5,25 @@ import { Container } from './styles';
 
 import { Droppable } from 'react-beautiful-dnd';
 
-const Shelf = ({ col: { list, id } }) => {
+const Shelf = ({ col: { list, id }, orientation }) => {
     return (
-        <Droppable droppableId={id}>
+        <Droppable droppableId={id} direction="horizontal">
             {(provided) => (
                 <div
                     style={{
                         display: 'flex',
-                        flexDirection: 'column',
-                        border: '1px solid black',
-                        width: '50px'
+                        flexDirection: 'row',
+                        border: '1px solid brown',
+                        minWidth: '400px',
+                        minHeight: '100px',
+                        margin: '10px',
+                        justifyContent: orientation,
                     }}>
                     <div
                         style={{
                             display: 'flex',
-                            flexDirection: 'column',
-                            minHeight: '120px'
+                            flexDirection: 'row',
+                            minWidth: '100%',
                         }}
                         {...provided.droppableProps}
                         ref={provided.innerRef}>

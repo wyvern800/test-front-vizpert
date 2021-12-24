@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
     border: 1px solid green;
     width: 400px;
     padding: 5px;
+    margin: 5px;
 `;
 
 export const Shelf = styled.ul`

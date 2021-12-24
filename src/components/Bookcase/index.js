@@ -1,10 +1,11 @@
 import { React, useState } from 'react';
-import { Wrapper } from './styles';
 import { DragDropContext } from 'react-beautiful-dnd';
 
 import Shelf from '../Bookcase/Shelf';
 
-import { colors, sizes }  from '../../utils/utils'
+import { Wrapper } from './styles';
+
+import { colors, sizes } from '../../utils/utils';
 
 const Bookcase = () => {
     const upperBooksList = [
@@ -34,17 +35,19 @@ const Bookcase = () => {
             title: 'D',
             color: colors.red,
             size: 1
-        },
+        }
     ];
 
     const initialColumns = {
         upper: {
             id: 'upper',
-            list: [...upperBooksList]
+            list: [...upperBooksList],
+            orientation: 'flex-end'
         },
         bottom: {
             id: 'bottom',
-            list: [...lowerBooksList]
+            list: [...lowerBooksList],
+            orientation: 'flex-start'
         }
     };
 
@@ -119,10 +122,21 @@ const Bookcase = () => {
     };
 
     return (
-        <DragDropContext onDragEnd={onDragEnd} direction="horizontal">
-            {Object.values(columns).map((col) => (
-                <Shelf col={col} key={col.id} />
-            ))}
+        <DragDropContext
+            style={{
+                border: '1px solid brown'
+            }}
+            onDragEnd={onDragEnd}
+            direction="horizontal">
+            <Wrapper>
+                {Object.values(columns).map((col) => (
+                    <Shelf
+                        col={col}
+                        key={col.id}
+                        orientation={col.orientation}
+                    />
+                ))}
+            </Wrapper>
         </DragDropContext>
     );
 };

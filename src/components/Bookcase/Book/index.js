@@ -2,18 +2,19 @@ import React from 'react';
 
 import { Draggable } from 'react-beautiful-dnd';
 
-import { Container } from './styles';
+import { Wrapper } from './styles';
 
 const Book = ({ title, index }) => {
     return (
         <Draggable draggableId={title} index={index}>
-            {(provided) => (
-                <div
+            {(provided, snapshot) => (
+                <Wrapper
                     ref={provided.innerRef}
                     {...provided.draggableProps}
-                    {...provided.dragHandleProps}>
+                    {...provided.dragHandleProps}
+                    isDragging={snapshot.isDragging}>
                     {title}
-                </div>
+                </Wrapper>
             )}
         </Draggable>
     );
