@@ -2,12 +2,16 @@ import { React, useState } from "react";
 import { Wrapper } from "./styles";
 import Bookcase from "../../components/Bookcase";
 import Controls from "../../components/Controls";
+import Clock from "../../components/Clock";
+import Logo from "../../components/Logo";
 
 const Home = () => {
   return (
     <Wrapper>
-      <Bookcase/>
-      <Controls />
+      <Clock />
+      <Bookcase />
+      {/**<Controls />**/}
+      <Logo />
     </Wrapper>
   );
 };

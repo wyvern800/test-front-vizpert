@@ -7,25 +7,18 @@ import { Wrapper } from './styles';
 const Book = ({ book, index }) => {
     const { title, img } = book;
 
-    /**
-     * Draws the book cover
-     * @param {string} img The book's cover image
-     * @returns rendered book cover image
-     */
-    const BookCover = ({ img }) => {
-        let [icon, setIcon] = useState('');
+    const [icon, setIcon] = useState('');
 
-        const importIcon = async () => {
-            let importedIcon = await import(`../../../assets/${img}.svg`);
-            setIcon(importedIcon.default);
-        };
-
-        useEffect(() => {
-            importIcon();
-        }, []);
-
-        return <img alt="" src={icon} />;
+    // Imports the icon from the assets folder
+    const importIcon = async () => {
+        let importedIcon = await import(`../../../assets/${img}.svg`);
+        setIcon(importedIcon.default);
     };
+
+    // Executes once when this component is loaded
+    useEffect(() => {
+        importIcon();
+    }, []);
 
     return (
         <Draggable draggableId={title} index={index}>
@@ -35,7 +28,7 @@ const Book = ({ book, index }) => {
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}
                     isDragging={snapshot.isDragging}>
-                    <BookCover img={img} />
+                    <img alt={title} src={icon} />
                 </Wrapper>
             )}
         </Draggable>
