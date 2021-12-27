@@ -4,6 +4,7 @@ import bg_stripes from "../assets/bg_stripes.svg";
 import ground from "../assets/ground.svg";
 
 export default createGlobalStyle`
+
 * {
   color: #000;
 }

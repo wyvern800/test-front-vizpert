@@ -11,8 +11,9 @@ const Home = () => {
       <Wrapper>
         <ClockComponent />
         <Bookcase />
-        {/**<Controls />**/}
         <Logo />
+
+        <Controls />
       </Wrapper>
     </>
   );
