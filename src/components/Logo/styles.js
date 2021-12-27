@@ -5,6 +5,12 @@ export const Wrapper = styled.div`
   margin-top: -20%;
   width: 15%;
 
-  img {
+
+
+  // Increases the logo size on smaller screens
+  @media (max-width: 414px) {
+    width: 35%;
+    margin-bottom: 30%;
+    margin-top: -33%;
   }
 `;
