@@ -1,12 +1,15 @@
 import GlobalStyle from "./styles/global";
 import { BrowserRouter } from "react-router-dom";
 import Routes from "./routes";
+import ShelvesProvider from "./context/shelves";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Routes />
+        <ShelvesProvider>
+          <Routes />
+        </ShelvesProvider>
         <GlobalStyle />
       </BrowserRouter>
     </>

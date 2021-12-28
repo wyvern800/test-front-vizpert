@@ -1,19 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Draggable } from 'react-beautiful-dnd';
 
-import { Container } from './styles';
+import { Wrapper } from './styles';
 
-const Book = ({ title, index }) => {
+const Book = ({ book, index }) => {
+    const { title, img } = book;
+
+    const [icon, setIcon] = useState('');
+
+    // Imports the icon from the assets folder
+    const importIcon = async () => {
+        let importedIcon = await import(`../../../assets/${img}.svg`);
+        setIcon(importedIcon.default);
+    };
+
+    // Executes once when this component is loaded
+    useEffect(() => {
+        importIcon();
+    }, []);
+
     return (
         <Draggable draggableId={title} index={index}>
-            {(provided) => (
-                <div
+            {(provided, snapshot) => (
+                <Wrapper
                     ref={provided.innerRef}
                     {...provided.draggableProps}
-                    {...provided.dragHandleProps}>
-                    {title}
-                </div>
+                    {...provided.dragHandleProps}
+                    isDragging={snapshot.isDragging}>
+                    <img alt={title} src={icon} />
+                </Wrapper>
             )}
         </Draggable>
     );
