@@ -36,28 +36,28 @@ O app consiste basicamente em uma estante de livros onde o usuário poderá orga
 
 ## Desafios Extras:
 
-- Criar um novo livro
-- Atualizar livro
-- Deletar livro
-- Ordenar por data de lançamento
-- Fazer o relógio funcionar
+- [] (Criar um novo livro)
+- [] (Atualizar livro)
+- [] (Deletar livro)
+- [] (Ordenar por data de lançamento)
+- [x] (Fazer o relógio funcionar)
 
-- Forma de entrega:
-  • Crie um repositório no GitHub.  
-  • Efetue os commits de seu projeto neste repositório.  
-  • Informe o link do repositório na resposta do e-mail.  
-  • Adicione qualquer outra informação que você julgue relevante no e-mail ou em um arquivo readme.md  
+ ## Forma de entrega:
+- Crie um repositório no GitHub.  
+- Efetue os commits de seu projeto neste repositório.  
+- Informe o link do repositório na resposta do e-mail.  
+- Adicione qualquer outra informação que você julgue relevante no e-mail ou em um arquivo readme.md  
 
-- O que será avaliado?
-  Suas habilidades para codificação e os recursos utilizados para a resolução do problema.
+## O que será avaliado?
+- Suas habilidades para codificação e os recursos utilizados para a resolução do problema.
 
 ## Critérios para avaliação:
 
-• Resultado vs Layout proposto
-• Gerenciamento de estados
-• Bons nomes de variáveis e em inglês
-• Boas práticas de desenvolvimento;
-• Código limpo e legível.
+- Resultado vs Layout proposto  
+- Gerenciamento de estados  
+- Bons nomes de variáveis e em inglês  
+- Boas práticas de desenvolvimento;  
+- Código limpo e legível.  
 
 OBS: Você pode fazer uso de bibliotecas externas (Npm).
 
