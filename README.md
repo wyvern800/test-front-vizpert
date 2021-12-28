@@ -35,10 +35,10 @@ O app consiste basicamente em uma estante de livros onde o usuário poderá orga
 
 ## Desafios Extras:
 
-- [] (Criar um novo livro)
-- [] (Atualizar livro)
-- [] (Deletar livro)
-- [] (Ordenar por data de lançamento)
+- [ ] (Criar um novo livro)
+- [ ] (Atualizar livro)
+- [ ] (Deletar livro)
+- [ ] (Ordenar por data de lançamento)
 - [x] (Fazer o relógio funcionar)
 
  ## Forma de entrega:
