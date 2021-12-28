@@ -178,9 +178,11 @@ const Controls = () => {
             />
           </Filters>
           <Separator />
+          
           <Organize
             alt="organize"
             src={organizeButtonSprite}
+            disabled={selectedFilter === ''}
             onClick={() => organize()}
           />
         </BoardWrapper>
