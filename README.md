@@ -9,9 +9,12 @@
     "styled-components": "^5.3.3",
 ```
 
-## Como rodar?
+## Como rodar? (Utilizei o yarn por preferência)
+```bash
 1. yarn install
 2. yarn start
+3. Abra o link em algum navegador http://localhost:3000 e voilá
+```
 
 ### O que você deve fazer:
 
@@ -23,27 +26,27 @@ O app consiste basicamente em uma estante de livros onde o usuário poderá orga
 
 ## Features obrigatórias:
 
-2 listagens de livros (prateleiras)
-Permitir a troca das posições dos livros arrastando e soltando, podendo ser para a mesma prateleira ou não.
-Ao selecionar um tipo de sort, e clicar em “Organize” a ordenação deve ser aplicada a cada prateleira separadamente levando em conta os livros presentes.
-Inverter a ordem quando clicar novamente no botão, caso a mesma opção de sort esteja selecionada.
-Os tipos de ordenação são: Ordem alfabética, Tamanho e por Cor (Vermelho, Laranja, Amarelo, Verde, Azul Claro, Azul Escuro, Violeta, Rosa)
+- [x] (2 listagens de livros (prateleiras))
+- [x] (Permitir a troca das posições dos livros arrastando e soltando, podendo ser para a mesma prateleira ou não.)  
+- [x] (Ao selecionar um tipo de sort, e clicar em “Organize” a ordenação deve ser aplicada a cada prateleira separadamente levando em conta os livros  presentes.)  
+- [x] (Inverter a ordem quando clicar novamente no botão, caso a mesma opção de sort esteja selecionada.)  
+- [x] (Os tipos de ordenação são: Ordem alfabética, Tamanho e por Cor (Vermelho, Laranja, Amarelo, Verde, Azul Claro, Azul Escuro, Violeta, Rosa))  
 
 (Caso houver qualquer dificuldade em correlacionar os nomes às cores, favor entrar em contato)
 
 ## Desafios Extras:
 
-Criar um novo livro
-Atualizar livro
-Deletar livro
-Ordenar por data de lançamento
-Fazer o relógio funcionar
+- Criar um novo livro
+- Atualizar livro
+- Deletar livro
+- Ordenar por data de lançamento
+- Fazer o relógio funcionar
 
 - Forma de entrega:
-  • Crie um repositório no GitHub.
-  • Efetue os commits de seu projeto neste repositório.
-  • Informe o link do repositório na resposta do e-mail.
-  • Adicione qualquer outra informação que você julgue relevante no e-mail ou em um arquivo readme.md
+  • Crie um repositório no GitHub.  
+  • Efetue os commits de seu projeto neste repositório.  
+  • Informe o link do repositório na resposta do e-mail.  
+  • Adicione qualquer outra informação que você julgue relevante no e-mail ou em um arquivo readme.md  
 
 - O que será avaliado?
   Suas habilidades para codificação e os recursos utilizados para a resolução do problema.
