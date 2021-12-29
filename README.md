@@ -37,7 +37,7 @@ O app consiste basicamente em uma estante de livros onde o usuário poderá orga
 
 - [ ] (Criar um novo livro)
 - [ ] (Atualizar livro)
-- [ ] (Deletar livro)
+- [X] (Deletar livro - Para deletar é só arrastá-lo para fora da estante)
 - [ ] (Ordenar por data de lançamento)
 - [x] (Fazer o relógio funcionar)
 
