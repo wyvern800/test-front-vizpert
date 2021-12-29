@@ -30,7 +30,7 @@ export const Wrapper = styled.div`
     height: 38vh;
     background-image: url(${img});
     background-repeat: no-repeat;
-    
+
     min-width: 35vh;
   }
 
@@ -51,26 +51,49 @@ export const Wrapper = styled.div`
   }
 
   @media (max-width: 540px) {
-    margin-top: 8%;  
+    margin-top: 8%;
   }
 
-  @media (width: 1024px ) and (min-height: 600px) {
-    margin-top: 1%;  
+  @media (width: 1024px) and (min-height: 600px) {
+    margin-top: 1%;
   }
 
-  @media (width: 1024px ) and (min-height: 1366px) {
-    margin-top: 9%;  
+  @media (width: 1024px) and (min-height: 1366px) {
+    margin-top: 9%;
   }
 
-  @media (width: 1280px ) and (min-height: 800px) {
-    margin-top: 1%;  
+  @media (width: 1280px) and (min-height: 800px) {
+    margin-top: 1%;
   }
 
-  @media (width: 280px ) and (min-height: 653px) {
-    margin-top: 5%;  
+  @media (width: 280px) and (min-height: 653px) {
+    margin-top: 5%;
   }
 
-  @media (max-width: 410px ) and (height: 822px) {
-    margin-top: 40%;  
+  @media (max-width: 410px) and (height: 822px) {
+    margin-top: 40%;
+  }
+`;
+
+export const ConfirmDeletion = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+`;
+
+export const ModalButton = styled.button`
+  color: white;
+  font-weight: bold;
+  border: 0px;
+  border-radius: 5px;
+  background-color: ${(props) => props.color};
+  padding: 2%;
+  width: 15%;
+  margin: 2%;
+  outline: none;
+  transition: background-color 0.2s ease 0s;
+  cursor: pointer;
+
+  &&:hover {
+    filter: brightness(85%);
   }
 `;

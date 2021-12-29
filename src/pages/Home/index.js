@@ -12,7 +12,6 @@ const Home = () => {
         <ClockComponent />
         <Bookcase />
         <Logo />
-
         <Controls />
       </Wrapper>
     </>

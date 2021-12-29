@@ -29,7 +29,7 @@ const Controls = () => {
     colors: false,
     sizes: false,
   });
-  
+
   const [selectedFilter, setSelectedFilter] = useState("");
 
   /**
@@ -128,22 +128,21 @@ const Controls = () => {
         });
         break;
       default:
-        console.log("No ordernation selected")
+        console.log("No ordernation selected");
         return;
     }
 
     //console.log(upper);
-    console.log("organize("+selectedFilter+")");
-    console.log("after:", shelves)
+    console.log("organize(" + selectedFilter + ")");
+    console.log("after:", shelves);
   };
 
-  const FilterButton = ({ icon, width, selected }) => {
+  const FilterButton = ({ icon, selected }) => {
     const { value } = selected;
 
     return (
       <Filter
         selected={value}
-        width={width}
         onClick={() => selectFilter(selected)}
       >
         <img src={icon} />
@@ -153,38 +152,59 @@ const Controls = () => {
 
   return (
     <Wrapper>
-      <Lady alt="lady" src={lady} />
       <Board>
+        <Lady alt="lady" src={lady} />
         <BoardWrapper>
-          <SortBy>SORT BY</SortBy>
-          <Filters>
-            <FilterButton
-              icon={filterAlpha}
-              width={"10%"}
-              selected={{
-                filterName: "alphabetic",
-                value: filters["alphabetic"],
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              marginTop: "11%",
+              marginBottom: "11%",
+              marginRight: "3%",
+              width: "45%",
+              //border: "1px solid yellow",
+            }}
+          >
+            <SortBy>SORT BY</SortBy>
+            <Filters>
+              <FilterButton
+                icon={filterAlpha}
+                selected={{
+                  filterName: "alphabetic",
+                  value: filters["alphabetic"],
+                }}
+              />
+              <FilterButton
+                icon={filterColors}
+                selected={{ filterName: "colors", value: filters["colors"] }}
+              />
+              <FilterButton
+                icon={filterSizes}
+                selected={{ filterName: "sizes", value: filters["sizes"] }}
+              />
+            </Filters>
+            <Separator />
+            {/**<div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                width: "100%",
+                flexDirection: "column",
               }}
-            />
-            <FilterButton
-              icon={filterColors}
-              width={"20%"}
-              selected={{ filterName: "colors", value: filters["colors"] }}
-            />
-            <FilterButton
-              icon={filterSizes}
-              width={"20%"}
-              selected={{ filterName: "sizes", value: filters["sizes"] }}
-            />
-          </Filters>
-          <Separator />
-          
-          <Organize
-            alt="organize"
-            src={organizeButtonSprite}
-            disabled={selectedFilter === ''}
-            onClick={() => organize()}
-          />
+            >
+              <div>
+                <span>Add</span>
+              </div>**/
+              <Organize
+                alt="organize"
+                src={organizeButtonSprite}
+                disabled={selectedFilter === ""}
+                onClick={() => organize()}
+              />
+           /**<div>**/}
+          </div>
         </BoardWrapper>
       </Board>
     </Wrapper>
