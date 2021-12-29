@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   height: 100%;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-direction: row;
   align-items: center;
 
